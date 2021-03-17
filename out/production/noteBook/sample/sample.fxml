@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10"
+          xmlns="http://javafx.com/javafx/15.0.1"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0">
+         <top>
+            <MenuBar style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+                <Menu text="File">
+                    <MenuItem onAction="#onSave" text="Save" />
+                    <MenuItem onAction="#onLoad" text="Load" />
+                    <MenuItem onAction="#onClose" text="Close" />
+                </Menu>
+                <Menu text="Help">
+                    <MenuItem onAction="#onAbout" text="About" />
+                </Menu>
+            </MenuBar>
+         </top>
+         <bottom>
+            <HBox prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <TextArea fx:id="areaText" prefHeight="200.0" prefWidth="200.0"
+            style="-fx-control-inner-background:#000000;
+            -fx-font-family: Consolas; -fx-highlight-fill: #00ff00;
+            -fx-highlight-text-fill: #000000;
+            -fx-text-fill: #00ff00;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>
